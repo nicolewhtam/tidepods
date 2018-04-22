@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  body {
+  background-color: mintcream;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  }
+
+  #main {
+  width: 80%;
+  max-width: 950px;
+  border: 1px gray solid;
+  margin: auto;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  }
+
+  #header {
+  margin-top: 0;
+  border: 2px solid black;
+  padding: 15px;
+  height: 250px;
+  background: navy;
+  background-image: url("Untitled-2.jpg");
+  color: white;
+  }
+
+    label {
+    display: block;
+    }
+
+    input {
+    width: 30px;
+    margin-left: 20px;
+    }
+
+    h1{
+      clear: both;
+      padding-top: 20px;
+    }
+
+    h2 {
+    clear: both;
+    padding-top: 20px;
+    }
+
+    button {
+    width: 100px;
+    margin-top: 20px;
+    }
+
+  </style>
+
+<body>
+  <form id="form1">
+
+    <div id="main"><!-- open main div -->
+    <div id="header"><!-- open header div -->
+    </div><!-- close header div -->
+
+
+
+
+  <fieldset>
+  <h2>What is your favourite snack?</h2>
+  <label for="1a"><input type="radio" name="a" value="2" id="Kimchi Fries" /> Kimchi Fries</label>
+  <label for="1b"><input type="radio" name="a" value="3" id="Nutella" /> Nutella</label>
+  <label for="1c"><input type="radio" name="a" value="5" id="Guacamole" /> Guacamole</label>
+  <label for="1d"><input type="radio" name="a" value="7" id="Cake"/> Cake</label>
+  <label for="1e"><input type="radio" name="a" value="11" id="Tide Pod"/> Tide Pod</label>
+
+  <h2>What is your favourite drink?</h2>
+  <label for="2a"><input type="radio" name="b" value="2" id="H2O"/>H<sub>2</sub>O</label>
+  <label for="2b"><input type="radio" name="b" value="3" id="Vodka"/>Vodka</label>
+  <label for="2c"><input type="radio" name="b" value="5" id="Redbul;" />Redbull</label>
+  <label for="2d"><input type="radio" name="b" value="7" id="Coke/Pepsi" />Coke/Pepsi</label>
+  <label for="2e"><input type="radio" name="b" value="11" id="Tide Pod" />Tide Pod</label>
+
+  <h2>What is your favourite TV Show?</h2>
+  <label for="3a"><input type="radio" name="c" value="2" id="FRIENDS" />FRIENDS</label>
+  <label for="3b"><input type="radio" name="c" value="3" id="Riverdale" />Riverdale</label>
+  <label for="3c"><input type="radio" name="c" value="5" id="How To Get Away With Murder" />How To Get Away With Murder</label>
+  <label for="3d"><input type="radio" name="c" value="7" id="How I Met Your Mother" />How I Met Your Mother</label>
+  <label for="3e"><input type="radio" name="c" value="11" id="Tide Pod" />Tide Pod</label>
+
+  <h2>Who is your favourite Waterloo math professor?</h2>
+  <label for="4a"><input type="radio" name="d" value="2" id="Conrad Hewitt" />Conrad Hewitt</label>
+  <label for="4b"><input type="radio" name="d" value="3" id="Jun Liu" />Jun Liu</label>
+  <label for="4c"><input type="radio" name="d" value="5" id="Dan Wolczuk" />Dan Wolczuk</label>
+  <label for="4d"><input type="radio" name="d" value="7" id="Jordan Hamilton" />Jordan Hamilton</label>
+  <label for="4e"><input type="radio" name="d" value="11" id="Tide Pod" />Tide Pod</label>
+
+  <h2>Choice of social media?</h2>
+  <label for="5a"><input type="radio" name="e" value="2" id="Reddit" />Reddit</label>
+  <label for="5b"><input type="radio" name="e" value="3" id="Snapchat" />Snapchat</label>
+  <label for="5c"><input type="radio" name="e" value="5" id="Tinder" />Tinder</label>
+  <label for="5d"><input type="radio" name="e" value="7" id="Instagram" />Instagram</label>
+  <label for="5e"><input type="radio" name="e" value="11" id="Tide Pod" />Tide Pod</label>
+
+  <h2>Cali or Bust?</h2>
+  <label for="6a"><input type="radio" name="f" value="2" id="Cali" />Cali</label>
+  <label for="6b"><input type="radio" name="f" value="3" id="Facebook(Menlo Park (in 4a btw))" />Facebook(Menlo Park(in 4a btw))</label>
+  <label for="6c"><input type="radio" name="f" value="5" id="Hidden Acres Mennonite Camp" />Hidden Acres Mennonite Camp</label>
+  <label for="6d"><input type="radio" name="f" value="7" id="Bust" />Bust</label>
+  <label for="6e"><input type="radio" name="f" value="11" id="Tide Pod" />Tide Pod</label>
+
+
+  <button type="submit" value="Submit">Submit</button>
+  </fieldset>
+  </form>
+
+  <p>Your score is: <span id="grade">__</span></p>
+  <p id="grade2"></p>
+
+
+
+  <script>
+    document.getElementById("form1").onsubmit=function() {
+         num_as = parseInt(document.querySelector('input[name = "a"]:checked').value );
+    	   num_bs = parseInt(document.querySelector('input[name = "b"]:checked').value);
+    	   num_cs = parseInt(document.querySelector('input[name = "c"]:checked').value);
+         num_ds = parseInt(document.querySelector('input[name = "d"]:checked').value);
+         num_es = parseInt(document.querySelector('input[name = "e"]:checked').value);
+         num_fs = parseInt(document.querySelector('input[name = "f"]:checked').value);
+
+
+    	   result = num_as + num_bs + num_cs + num_ds + num_es + num_fs;
+
+         document.getElementById("grade").innerHTML = result;
+
+
+
+      if (result == 13) {result2 = "@oppa_pod.<br /><img src='oppapod.jpg' width='300' />"};
+      if (result == 31) {result2 = "@GARV_POD.<br /><img src='garvpod.jpg' width='300' />"};
+      if (result == 42) {result2 = "@kenpod_42.<br /><img src='kenthepod.jpg' width='300' />"};
+      if (result <= 12) {result2 = "@tide_pod96.<br /><img src='reg.jpg' width='300' />"};
+      if (result > 12 && result <= 18 && result != 13) {result2 = "@xX_PrincessPod_Xx.<br /><img src='princess.jpg' width = '300' />"};
+      if (result > 18 && result <= 30 ) {result2 = "@SmokePodEveryDay420.<br /><img src='weed.jpg' width = '300' />"};
+      if (result > 30 && result < 42 && result != 31) {result2 = "@FlowingWithTheTide.<br /><img src='bloo.jpg' width = '300' />"};
+      if (result > 42 && result <= 66 ) {result2 = "@Supreme_x_TidePod.<br /><img src='supreme.jpg' width = '300' />"};
+
+
+
+
+
+      document.getElementById("grade2").innerHTML = result2;
+
+
+
+
+
+return false; // required to not refresh the page; just leave this here
+} //this ends the submit function
+
+</script>
+
+
+
+</body>
+
+
+
+</head>
+
+</html>
